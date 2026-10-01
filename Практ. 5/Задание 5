@@ -1,0 +1,23 @@
+money = int(input("Введите сумму, которую хотите снять: "))
+
+print("Выдача наличных:")
+
+count = money // 5000
+print(f"Купюр по 5000 руб: {count} шт.")
+money %= 5000
+
+count = money // 2000
+print(f"Купюр по 2000 руб: {count} шт.")
+money %= 2000
+
+count = money // 1000
+print(f"Купюр по 1000 руб: {count} шт.")
+money %= 1000
+
+count = money // 500
+print(f"Купюр по 500 руб: {count} шт.")
+money %= 500
+
+count = money // 200
+print(f"Купюр по 200 руб: {count} шт.")
+money %= 200
