@@ -1,0 +1,10 @@
+all_money = float(input("Введите свой годовой доход: "))
+nalog = all_money * 0.13
+total_money = all_money - nalog
+
+print(f" ") #чтобы было по-красивее
+print(f"==============================")
+print(f"Общая сумма дохода: {all_money:.2f}")
+print(f"Налог составляет: {nalog:.2f}")
+print(f"Сумма «на руки» после вычета налога: {total_money:.2f}")
+print(f"==============================")
