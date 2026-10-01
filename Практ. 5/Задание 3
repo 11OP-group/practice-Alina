@@ -1,0 +1,20 @@
+print("")
+print(f"Курс доллара к рублю составляет 95.50 руб")
+print(f"==============================")
+
+def convert_usd_to_rub(amount_usd):
+    """
+    Конвертирует (переводит) кол-во долларов в рубли
+    по заданному курсу валюты.
+
+    :param amount_usd: (float): Кол-во долларов.
+
+    :return: (float): Кол-во рублей.
+    """
+    amount_rub = amount_usd * 95.50
+    return(amount_rub)
+
+usd = float(input("Введите кол-во долларов: "))
+
+print(f"==============================")
+print(f"{usd} $ = {convert_usd_to_rub(usd)} ₽")
