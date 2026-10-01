@@ -1,0 +1,41 @@
+from math import sqrt
+
+x1,y1 = map(int,input("Введите координаты вершины точки А: ").split())
+x2,y2 = map(int,input("Введите координаты вершины точки В: ").split())
+x3,y3 = map(int,input("Введите координаты вершины точки С: ").split())
+
+def calculate_distance(x1, y1, x2, y2):
+    """
+    Вычисляет расстояние между двумя точками.
+    :param x1: (int): Координата х1 первой вершины.
+    :param y1: (int): Координата у1 первой вершины.
+    :param x2: (int): Координата х2 второй вершины.
+    :param y2: (int): Координата у2 второй вершины.
+    :return: Расстояние между двумя точками
+    """
+    distance = sqrt((x2-x1)**2 + (y2-y1)**2)
+    return(distance)
+
+a = calculate_distance(x1, y1, x2, y2)
+b = calculate_distance(x2, y2, x3, y3)
+c = calculate_distance(x1, y1, x3, y3)
+
+print(f"==============================")
+print(f"Расстояние между точками А и В: {a:.2f}")
+print(f"Расстояние между точками В и С: {b:.2f}")
+print(f"Расстояние между точками А и С: {c:.2f}")
+print(f"==============================")
+
+def calculate_triangle_area(a, b, c):
+    """
+    Вычисляет площадь треугольника по формуле Герона.
+    :param a: (int): Первая сторона треугольника
+    :param b: (int): Вторая сторона треугольника
+    :param c: (int): Третья сторона треугольника
+    :return: Площадь треугольника.
+    """
+    p = (a+b+c)/2
+    s = sqrt(p*(p-a)*(p-b)*(p-c))
+    return(s)
+
+print(f"Площадь треугольника ABC равна {calculate_triangle_area(a, b, c):.2f}")
