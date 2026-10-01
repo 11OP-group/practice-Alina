@@ -1,3 +1,0 @@
-from math import *
-x = float(input("Введите действительное число: "))
-print(floor(x) + ceil(x))
