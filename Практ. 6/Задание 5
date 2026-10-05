@@ -1,0 +1,18 @@
+BaseColors = ["красный","жёлтый","синий"]
+ComeColors = ["фиолетовый","оранжевый","зелёный"]
+
+print("Пример ввода цветов: красный + синий ")
+
+color1,color2 = map(str, input("Введите два основных цвета (как показано в примере): ").split(" + "))
+
+if color1 not in BaseColors or color2 not in BaseColors:
+    print("Ошибка: можно вводить тольцо основные цвета: красный, жёлтый или синий")
+
+elif (color1 == "красный" and color2 == "синий") or (color2 == "красный" and color1 == "синий"):
+    print("фиолетовый")
+
+elif (color1 == "красный" and color2 == "жёлтый") or (color2 == "красный" and color1 == "жёлтый"):
+    print("оранжевый")
+
+elif (color1 == "жёлтый" and color2 == "синий") or (color2 == "жёлтый" and color1 == "синий"):
+    print("зелёный")
