@@ -1,0 +1,13 @@
+weight = int(input("Введите вес боксёра-любителя: "))
+if weight < 68:
+    if weight < 60:
+        print(f"{weight} - лёгкий вес")
+
+    elif 59 < weight < 64:
+        print(f"{weight} - первый полусредний вес")
+
+    elif 63 < weight < 69:
+        print(f"{weight} - полусредний вес")
+
+else:
+    print("Иди худей, жирдяй")
