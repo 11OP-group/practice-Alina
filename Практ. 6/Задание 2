@@ -1,0 +1,19 @@
+num = int(input("Введите номер кармана рулетки: "))
+
+if num == 0:
+    print("Зелёный")
+
+if 0 < num < 11 or 18 < num < 29:
+    if num % 2 != 0:
+        print("Красный")
+    else:
+        print("Чёрный")
+
+if 10 < num < 19 or 29 < num < 37:
+    if num % 2 != 0:
+        print("Чёрный")
+    else:
+        print("Красный")
+
+if not(-1<num<37):
+    print("Ошибка ввода! Введите число от 0 до 36.")
