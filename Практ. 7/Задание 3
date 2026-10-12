@@ -1,0 +1,88 @@
+print("=============================")
+print("         📋 МЕНЮ 📋         ")
+print("=============================")
+
+print("№ |  Напиток   |    Цена    ")
+print("1 | Кофе ☕    | 120 рублей ")
+print("2 | Чай 🍵     | 80 рублей  ")
+print("3 | Сок 🧃     | 100 рублей ")
+print("4 | Вода 💦    | 50 рублей  ")
+print("5 | Лимонад 🥤 | 90 рублей  ")
+print("=============================")
+
+print()
+drink = str(input("Введите номер напитка или его название: "))
+count = int(input("Введите кол-во порций: "))
+code = str(input("Введите код скидки (или нажмите Enter, если нет): "))
+print()
+
+count_text = None
+match count:
+    case 1:
+        count_text = "1 порция"
+    case 2 | 3 | 4:
+        count_text = f"{count} порции"
+    case _ if count > 4:
+        count_text = f"{count} порций"
+    case _:
+        count_text = None
+
+drink_name = None
+price = 0
+emoji = ""
+
+#кофе
+match drink:
+    case "кофе" | "Кофе" | "1":
+       drink_name = "Кофе"
+       price = 120
+       emoji = "☕"
+
+#чай
+    case "чай" | "Чай" | "2":
+        drink_name = "Чай"
+        price = 80
+        emoji = "🍵"
+
+#сок
+    case "сок" | "Сок" | "3":
+        drink_name = "Сок"
+        price = 100
+        emoji = "🧃"
+#вода
+    case "вода" | "Вода" | "4":
+        drink_name = "Вода"
+        price = 50
+        emoji = "💦"
+
+#лимонад
+    case "лимонад" | "Лимонад" | "5":
+        drink_name = "Лимонад"
+        price = 90
+        emoji = "🥤"
+#другое
+    case _:
+        drink_name = None
+
+if drink_name is None:
+    print("❌ Такого продукта нет в меню ❌")
+elif count_text is None:
+    print("❌ Введено некорректное кол-во порций ❌")
+else:
+    print("=============================")
+    print(f"   {emoji} КВИТАНЦИЯ КАФЕ {emoji}")
+    print("=============================")
+    print(f"Товар: {drink_name} {emoji}")
+    print(f"Количество: {count_text}")
+    print(f"Цена за порцию: {price} руб")
+    print(f"Сумма: {count * price}")
+    if code == "STUDENT":
+        skidka = count * price * 0.2
+        final_price = count * price - skidka
+        print(f'Скидка "STUDENT" (20%): -{int(skidka)} руб')
+        print("=============================")
+        print(f"💰 К ОПЛАТЕ: {int(final_price)} руб")
+        print("=============================")
+    else:
+        print(f"💰 К ОПЛАТЕ: {count * price} руб")
+        print("=============================")
