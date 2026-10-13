@@ -1,0 +1,9 @@
+from itertools import product
+c=0
+for x in product("XYZ",repeat = 5):
+    s = "".join(x)
+    c+=1
+    if c == 179:
+        print(c,s)
+
+#я решала это задание из егэ таким способом
