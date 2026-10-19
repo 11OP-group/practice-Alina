@@ -1,0 +1,33 @@
+"""#Задание 1
+for i in range(2,21,2):
+    print(i)"""
+
+"""#Задание 2
+n = int(input("Введите целое число: "))
+k = 1
+for i in range(1,n+1):
+    k *= i
+print(k)"""
+
+"""#Задание 3
+m,n = map(int,input("Введите 2 целых числа m и n (через пробел): ").split())
+if m<n:
+    for i in range(m,n+1):
+        print(i)
+else:
+    for i in range(m,n-1,-1):
+        print(i)"""
+
+#Задание 4
+m,n = map(int,input("Введите 2 натуральных числа m и n (через пробел): ").split())
+match(m,n):
+    case(m,n) if m>n:
+        print(f"Должно выполняться равенство: m<=n")
+        print(f"{m} <= {n}? Нет!")
+    case (m,n)  if m<0 or n<0:
+        print("Числа должны быть больше нуля!")
+    case _:
+        for i in range(m,n+1):
+            if i%17==0 or i%10==0 or (i%3==0 and i%5==0):
+                print(i)
+
