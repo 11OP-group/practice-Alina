@@ -1,0 +1,17 @@
+from random import randint
+chose = randint(0,100)
+c = 0 #попытки
+digit = 0 #введённое пользователем число
+if digit<0 or digit>100:
+    print("Вы ввели число, не входящее в диапазон!")
+else:
+    while digit != chose:
+        digit = int(input("Введите число: "))
+        c+=1
+        if digit > chose:
+            print("Меньше")
+        else:
+            print("Больше")
+    else:
+        print("Урааааа, победа!")
+        print(f"Было сделано {c} попыток")
