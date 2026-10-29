@@ -1,0 +1,20 @@
+num = int(input("Введите цену за товары: "))
+c = 0 #кол-во монет
+if num < 0:
+    print(f"Вам должна ведьма {abs(num)} рублей")
+    exit()
+else:
+    while num > 0:
+        if num >= 25:
+            num-=25
+            c+=1
+        elif num >= 10:
+            num-=10
+            c+=1
+        elif num >= 5:
+            num-=5
+            c+=1
+        else:
+            num-=1
+            c+=1
+print(f"Кол-во монет: {c}")
