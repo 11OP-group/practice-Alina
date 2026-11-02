@@ -1,0 +1,30 @@
+def sklonenie_slova(x):
+    """
+    :param x: (int) данная попытка
+    :return: сообщение с правильно склоняемыми словами
+    """
+    match(x):
+        case 2:
+            print(f"У вас осталось 2 попытки")
+        case 1:
+            print(f"У вас осталась 1 попытка")
+        case 0:
+            print(f"У вас осталось 0 попыток")
+    return
+popitka = 3
+
+while popitka >= 0:
+    password = input("Введите пароль: ")
+
+    if password == "admin":
+        print("Доступ разрешён!")
+        break
+
+    popitka-=1
+
+    if popitka >= 0:
+        sklonenie_slova(popitka)
+    else:
+        print("Вход заблокирован.")
+
+
