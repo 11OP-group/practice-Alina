@@ -1,0 +1,8 @@
+proizvedenie = 1
+while True:
+    num = int(input("Введите число: "))
+    if num > 0:
+        proizvedenie *= num
+    else:
+        break
+print(proizvedenie)
