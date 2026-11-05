@@ -1,0 +1,8 @@
+while True:
+    password = int(input("Введите пароль: "))
+
+    if password == 4590:
+        print("Доступ разрешен")
+        break
+    else:
+        print("Ошибка. Попробуйте ещё раз.")
