@@ -1,0 +1,13 @@
+sum = 0
+print("Для завершения ввода цен введите 0")
+while True:
+    num = int(input("Введите цену на товар: "))
+    if num == 0:
+        if sum > 1000:
+            sum*=0.9
+        break
+    if num<0:
+        print("Ощибка цены")
+        continue
+    sum+=num
+print(f"Итоговая сумма к оплате: {sum}")
