@@ -1,0 +1,10 @@
+all_numbers = []
+print("Для завершения ввода чисел введите 0")
+while True:
+    num = int(input("Введите число: "))
+    if num == 0:
+        mx = max(all_numbers)
+        break
+    all_numbers.append(num)
+
+print(f"Максимальное число из списка: {mx}")
