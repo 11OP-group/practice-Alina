@@ -1,0 +1,30 @@
+balance = 1000
+
+while True:
+    print(" ========================== ")
+    print("1. Узнать баланс")
+    print("2. Снять 100 рублей")
+    print("3. Положить 100 рублей")
+    print("4. Выход")
+    print(" ========================== ")
+
+    num = int(input("Введите пункт меню: "))
+
+    match num:
+        case 1:
+            print(f"Ваш баланс составляет: {balance}")
+        case 2:
+            if balance >= 100:
+                balance-=100
+                print("Снято")
+                print(f"Текущий баланс составляет: {balance}")
+            else:
+                print("Недостаточно средств")
+        case 3:
+            balance+=100
+            print(f"Текущий баланс составляет: {balance}")
+        case 4:
+            print("До свидания! 👋")
+            break
+        case _:
+            print("Неверная команда")
