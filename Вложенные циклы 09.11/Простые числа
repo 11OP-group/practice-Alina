@@ -1,0 +1,20 @@
+a,b = map(int, input("Введите 2 натуральных числа а и b (причём а<b): ").split(' '))
+
+def find_simple_digit(x,y):
+    a = []
+    if x<2:
+        x=2
+    for j in range(x,y+1):
+        f = True
+        for i in range(2,int(j**0.5)+1):
+            if j%i == 0:
+                f = False
+                break
+        if f:
+            a.append(j)
+    return a
+
+if a>b:
+    print("Первое число должно быть МЕНЬШЕ другого!")
+else:
+    print(find_simple_digit(a,b))
